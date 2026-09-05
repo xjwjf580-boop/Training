@@ -174,7 +174,7 @@
         ]},
         { label:'Толщина спины', items:[
           { id:'d2d', n:'Тяга к животу на нижнем блоке', en:'Seated Cable Row', pose:'row', sets:4, reps:'10', rest:'120 с',
-            steps:['Спина прямая, колени слегка согнуты','Тяни к низу живота, локти вдоль тела','Сведи лопатки, корпус не раскачивай'],
+            steps:['Спина прямая, колени слегка согнуты','Тяни к низу живота, локти вдоль тела','Свези лопатки, корпус не раскачивай'],
             vid:'тяга нижнего блока к животу техника' },
           { id:'d2e', n:'Тяга в рычажном тренажёре с упором', en:'Chest-supported Row', pose:'row', sets:3, reps:'10–12', rest:'90 с',
             steps:['Грудь плотно в упор, плечи расслаблены','Тяни локтями назад-вниз','Отпускай вес на 3 счёта'],
@@ -410,8 +410,8 @@
     }
     var csv = rows.map(function(r){
       return r.map(function(c){ return '"' + String(c).replace(/"/g, '""') + '"'; }).join(';');
-    }).join('\\r\\n');
-    var blob = new Blob(['\\ufeff' + csv], { type: 'text/csv;charset=utf-8;' });
+    }).join('\r\n');
+    var blob = new Blob(['\ufeff' + csv], { type: 'text/csv;charset=utf-8;' });
     var url = URL.createObjectURL(blob);
     var a = document.createElement('a');
     a.href = url;
@@ -708,7 +708,7 @@
         lines.push('Кардио: ' + c.join(' · '));
       }
       if (s && s.notes) { lines.push('Заметки: ' + s.notes); }
-      return lines.join('\\n');
+      return lines.join('\n');
     }
 
     panel.addEventListener('input', function(ev){
